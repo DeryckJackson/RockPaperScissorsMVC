@@ -2,17 +2,26 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <title>Create a Custom Postcard!</title>
+    <title>Rock Paper Scissors</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
   </head>
   <body>
-    <h1>Fill in your name and your friend's name to create your custom postcard!</h1>
-    <form action="/postcard" method="post">
-     <label for="sender">Sender's Name</label>
-     <input id="sender" name="sender" type="text">
-     <label for="recipient">Recipient's Name</label>
-     <input id="recipient" name="recipient" type="text">
-     <button type="submit">Go!</button>
+    <h1 class="jumbotron">Rock Paper Scissors</h1>
+    <form action="/rockpaperscissors" method="post">
+      <input type="radio" id="rock1" name="rock1">
+      <label for="rock1">Rock</label><br>
+      <input type="radio" id="paper1" name="paper1">
+      <label for="paper1">Paper</label><br>
+      <input type="radio" id="scissors2" name="scissors2">
+      <label for="scissors2">Scissors</label><br>
+
+      <input type="radio" id="rock2" name="rock2">
+      <label for="rock2">Rock</label><br>
+      <input type="radio" id="paper2" name="paper2">
+      <label for="paper2">Paper</label><br>
+      <input type="radio" id="scissors3" name="scissors3">
+      <label for="scissors3">Scissors</label>
+      <button type="submit">Go!</button>
     </form>
   </body>
 </html>

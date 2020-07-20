@@ -8,13 +8,12 @@ namespace RockPaperScissors.Controllers
     [Route("/")]
     public ActionResult Form() { return View(); }
 
-    [Route("/postcard")]
-    public ActionResult Postcard(string recipient, string sender)
+    [Route("/rockpaperscissors")]
+    public ActionResult RockPaperScissors(string player1, string player2)
     {
-      LetterVariable myLetterVariable = new LetterVariable();
-      myLetterVariable.Recipient = recipient;
-      myLetterVariable.Sender = sender;
-      return View(myLetterVariable);
+      Game ourGame = new Game(player1, player2);
+      ourGame.DetectWinner();
+      return View(ourGame);
     }
   }
 }
